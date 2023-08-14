@@ -2,18 +2,18 @@ import { Aluno } from "./Aluno";
 import { Usuario } from "./Usuario";
 
 export class Professor extends Usuario{
-    private alunos: Aluno;
+    private alunos: Aluno[];
     
     constructor(id: number, nome: string, alunos: Aluno){
         super(id, nome)
-        this.alunos = alunos;
+        this.alunos = [];
     }
 
-    getAlunos():Aluno{
+    getAlunos():Aluno[]{
         return this.alunos;
     }
 
-    setAlunos(alunos:Aluno){
+    setAlunos(alunos:Aluno[]){
         this.alunos = alunos;
     }
 
