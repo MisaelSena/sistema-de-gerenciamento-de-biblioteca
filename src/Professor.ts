@@ -3,8 +3,8 @@ import { Usuario } from "./Usuario";
 
 export class Professor extends Usuario{
     private alunos: Aluno[];
-    
-    constructor(id: number, nome: string, alunos: Aluno){
+    //Terceiro argumento array de Alunos como opcional.
+    constructor(id: number, nome: string, alunos: Aluno[] = []){
         super(id, nome)
         this.alunos = [];
     }
@@ -13,8 +13,8 @@ export class Professor extends Usuario{
         return this.alunos;
     }
 
-    setAlunos(alunos:Aluno[]){
-        this.alunos = alunos;
-    }
+    setAlunos(aluno:Aluno){
+        this.alunos.push(aluno);
+    }    
 
 }
